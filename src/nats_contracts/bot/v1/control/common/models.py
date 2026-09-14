@@ -13,6 +13,7 @@ PayloadT = TypeVar("PayloadT", bound=ContractModel)
 
 class EventInfo(ContractModel):
     trace_id: str
+    event_version: str = "V1"
     event_type: str
     event_name: str
     
