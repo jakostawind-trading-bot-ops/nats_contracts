@@ -7,7 +7,7 @@ class BotStartedPayload(ContractModel):
 
 class BotStartedEventInfo(EventInfo):
     event_type: Literal["lifecycle"] = "lifecycle"
-    event_name: Literal["BotStartedEvent"] = "BotStartedEvent"
+    event_name: Literal["BotStartedEventTest"] = "BotStartedEventTest"
     
 class BotStartedMsg(BotMessage):
     event: BotStartedEventInfo
