@@ -1,5 +1,6 @@
-from .models import BotMessage
+from .models import BotMessage, MsgInfo
 
 __all__ = [
-    "BotMessage"
+    "BotMessage",
+    "MsgInfo"
 ]

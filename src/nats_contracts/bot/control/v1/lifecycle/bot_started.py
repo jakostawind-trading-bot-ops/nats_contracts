@@ -9,7 +9,7 @@ class BotStartedEventInfo(MsgInfo):
     event_type: Literal["lifecycle"] = "lifecycle"
     event_name: Literal["BotStartedEvent"] = "BotStartedEvent"
     
-class BotStartedMsg(BotMessage):
+class BotStartedEvent(BotMessage):
     event: BotStartedEventInfo
     payload: BotStartedPayload
     msg: str = "Bot started"

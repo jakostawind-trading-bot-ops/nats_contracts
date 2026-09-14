@@ -1,5 +1,5 @@
-from .bot_started import BotStartedMsg
+from .bot_started import BotStartedEvent
 
 __all__ = [
-    "BotStartedMsg"
+    "BotStartedEvent"
 ]
