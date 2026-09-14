@@ -1,6 +1,6 @@
-from typing import Final, Literal
+from typing import Literal
 
-from nats_contracts.bot.v1.control.common.models import EventInfo, BotMessage, ContractModel
+from nats_contracts.bot.control.v1.common.models import EventInfo, BotMessage, ContractModel
 
 class BotStartedPayload(ContractModel):
     pass
