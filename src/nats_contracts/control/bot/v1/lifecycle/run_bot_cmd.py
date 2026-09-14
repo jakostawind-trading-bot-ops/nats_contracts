@@ -16,7 +16,11 @@ class RunBotCommandInfo(MsgInfo):
     message_name: Literal["RunBotCommand"] = "RunBotCommand"
 
 
+<<<<<<< HEAD
 class RunBotCmd(ControlMessage[RunBotPayload]):
+=======
+class RunBotCmdMsg(ControlMessage[RunBotPayload]):
+>>>>>>> 071e553 (0.3.2 исправлены ключи у дочрних классов)
     message: RunBotCommandInfo
     payload: RunBotPayload
     description: str = ""

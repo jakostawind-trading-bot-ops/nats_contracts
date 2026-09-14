@@ -16,7 +16,11 @@ class BotStartedEventInfo(MsgInfo):
     message_name: Literal["BotStartedEvent"] = "BotStartedEvent"
 
 
+<<<<<<< HEAD
 class BotStartedEvent(BotMessage[BotStartedPayload]):
+=======
+class BotStartedEvMsg(BotMessage[BotStartedPayload]):
+>>>>>>> 071e553 (0.3.2 исправлены ключи у дочрних классов)
     message: BotStartedEventInfo
     payload: BotStartedPayload
     description: str = "Bot started"
