@@ -1,15 +1,22 @@
 from typing import Literal
 
-from nats_contracts.control.bot.v1.common.models import MsgInfo, ControlMessage, ContractModel
+from nats_contracts.control.bot.v1.common.models import (
+    ContractModel,
+    ControlMessage,
+    MsgInfo,
+)
+
 
 class RunBotPayload(ContractModel):
     pass
 
+
 class RunBotCommandInfo(MsgInfo):
-    command_type: Literal["lifecycle"] = "lifecycle"
-    command_name: Literal["RunBotCommand"] = "RunBotCommand"
-    
-class RunBotCmd(ControlMessage):
-    command: RunBotCommandInfo
+    message_type: Literal["lifecycle"] = "lifecycle"
+    message_name: Literal["RunBotCommand"] = "RunBotCommand"
+
+
+class RunBotCmd(ControlMessage[RunBotPayload]):
+    message: RunBotCommandInfo
     payload: RunBotPayload
-    msg: str = ""
+    description: str = ""

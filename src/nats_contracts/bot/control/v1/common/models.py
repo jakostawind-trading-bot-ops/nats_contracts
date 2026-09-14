@@ -1,15 +1,9 @@
-from typing import Generic, TypeVar
-
 from pydantic import BaseModel, ConfigDict
 
 
 class ContractModel(BaseModel):
-    model_config = ConfigDict(
-        extra="ignore",
-        frozen=True
-    )
-    
-PayloadT = TypeVar("PayloadT", bound=ContractModel)
+    model_config = ConfigDict(extra="ignore", frozen=True)
+
 
 class MsgInfo(ContractModel):
     message_id: str
@@ -17,12 +11,12 @@ class MsgInfo(ContractModel):
     message_version: str = "V1"
     message_type: str
     message_name: str
-    
-class BotMessage(ContractModel, Generic[PayloadT]):
+
+
+class BotMessage[PayloadT: ContractModel](ContractModel):
     bot_id: str
     bot_status: str
-    event: MsgInfo
+    message: MsgInfo
     payload: PayloadT
-    msg: str
-    timestamp: int # in ms
-    
+    description: str
+    timestamp: int  # in ms
