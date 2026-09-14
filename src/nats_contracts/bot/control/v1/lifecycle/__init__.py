@@ -1,3 +1,5 @@
-from .bot_started_ev import BotStartedEvent
+from .bot_started_ev import BotStartedEvMsg
 
-__all__ = ["BotStartedEvent"]
+__all__ = [
+    "BotStartedEvMsg"
+]

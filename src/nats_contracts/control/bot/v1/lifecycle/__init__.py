@@ -1,3 +1,5 @@
-from .run_bot_cmd import RunBotCmd
+from .run_bot_cmd import RunBotCmdMsg
 
-__all__ = ["RunBotCmd"]
+__all__ = [
+    "RunBotCmdMsg"
+]
