@@ -11,15 +11,16 @@ class ContractModel(BaseModel):
     
 PayloadT = TypeVar("PayloadT", bound=ContractModel)
 
-class CommandInfo(ContractModel):
+class MsgInfo(ContractModel):
+    message_id: str
     trace_id: str
-    command_version: str = "V1"
-    command_type: str
-    command_name: str
+    message_version: str = "V1"
+    message_type: str
+    message_name: str
     
 class ControlMessage(ContractModel, Generic[PayloadT]):
     bot_id: str
-    command: CommandInfo
+    command: MsgInfo
     payload: PayloadT
     msg: str
     timestamp: int # in ms
