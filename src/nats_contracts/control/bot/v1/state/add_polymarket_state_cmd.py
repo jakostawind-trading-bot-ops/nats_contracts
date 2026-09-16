@@ -14,7 +14,7 @@ class AddPolymarketStateInfo(MsgInfo):
     message_type: Literal["state"] = "state"
     message_name: Literal["AddPolymarketStateCommand"]
     
-class AddPolymarketStateMsg(ControlMessage[AddPolymarketStatePayload]):
+class AddPolymarketStateCmdMsg(ControlMessage[AddPolymarketStatePayload]):
     message: AddPolymarketStateInfo
     payload: AddPolymarketStatePayload
     description: str = "Add polymarker state"

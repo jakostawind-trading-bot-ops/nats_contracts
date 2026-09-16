@@ -1,5 +1,5 @@
-from .add_polymarket_state import AddPolymarketStateMsg
+from .add_polymarket_state_cmd import AddPolymarketStateCmdMsg
 
 __all__ =  [
-    "AddPolymarketStateMsg"
+    "AddPolymarketStateCmdMsg"
 ]
