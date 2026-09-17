@@ -12,7 +12,7 @@ class AddAccountStatePayload(ContractModel):
     
 class AddAccountStateInfo(MsgInfo):
     message_type: Literal["state"] = "state"
-    message_name: Literal["AddAccountStateCommand"]
+    message_name: Literal["AddAccountStateCommand"] = "AddAccountStateCommand"
     
 class AddAccountStateCmdMsg(ControlMessage[AddAccountStatePayload]):
     message: AddAccountStateInfo
