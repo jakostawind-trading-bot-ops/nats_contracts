@@ -20,3 +20,18 @@ class BotMessage[PayloadT: ContractModel](ContractModel):
     payload: PayloadT
     description: str
     timestamp: int  # in ms
+    
+    @classmethod
+    def subject_suffix(cls) -> str:
+        info_class = cls.model_fields["message"].annotation
+        
+        message_type = info_class.model_fields["message_type"].default
+        message_name = info_class.model_fields["message_name"].default
+
+        if not isinstance(message_type, str) or not isinstance(message_name, str):
+            raise ValueError(
+                f"{cls.__name__}: message_type и message_name "
+                "должны иметь строковые значения по умолчанию"
+            )
+
+        return f"{message_type}.{message_name}"
