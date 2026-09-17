@@ -10,7 +10,7 @@ class AddTrackingMarketPayload(ContractModel):
     market_id: int
     
 class AddTrackingMarketInfo(MsgInfo):
-    message_type: Literal["polymarketapi"] = "polymarketapi"
+    message_type: Literal["trading_state"] = "trading_state"
     message_name: Literal["AddTrackingMarket"] = "AddTrackingMarket"
     
 class AddTrackingMarketCmdMsg(ControlMessage[AddTrackingMarketPayload]):
