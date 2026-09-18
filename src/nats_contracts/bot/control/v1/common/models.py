@@ -25,6 +25,7 @@ class BotMessage[PayloadT: ContractModel](ContractModel):
     def subject_suffix(cls) -> str:
         info_class = cls.model_fields["message"].annotation
         
+        message_version = info_class.model_fields["message_version"].default
         message_type = info_class.model_fields["message_type"].default
         message_name = info_class.model_fields["message_name"].default
 
@@ -34,4 +35,4 @@ class BotMessage[PayloadT: ContractModel](ContractModel):
                 "должны иметь строковые значения по умолчанию"
             )
 
-        return f"{message_type}.{message_name}"
+        return f"{message_version}.{message_type}.{message_name}"
