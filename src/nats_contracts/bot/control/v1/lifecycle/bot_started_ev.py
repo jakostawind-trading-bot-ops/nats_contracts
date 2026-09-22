@@ -24,16 +24,16 @@ from nats_contracts.bot.control.v1.common.models import (
 """
 
 
-class BotStartedPayload(ContractModel):
+class BotStartedEvPayload(ContractModel):
     pass
 
 
-class BotStartedEventInfo(MsgInfo):
+class BotStartedEvInfo(MsgInfo):
     message_type: Literal["lifecycle"] = "lifecycle"
     message_name: Literal["bot_started_ev"] = "bot_started_ev"
 
 
-class BotStartedEvMsg(BotMessage[BotStartedPayload]):
-    message: BotStartedEventInfo
-    payload: BotStartedPayload
+class BotStartedEvMsg(BotMessage[BotStartedEvPayload]):
+    message: BotStartedEvInfo
+    payload: BotStartedEvPayload
     description: str = "Bot started"
