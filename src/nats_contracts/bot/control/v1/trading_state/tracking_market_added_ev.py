@@ -16,14 +16,14 @@ from nats_contracts.bot.control.v1.common.models import (
     "trace_id": "550e8400-e29b-41d4-a716-446655440001",
     "message_version": "V1",
     "message_type": "trading_state",
-    "message_name": "market_is_tracking_ev"
+    "message_name": "tracking_market_added_ev"
   },
   "payload": {
     "market_info": {
       "market_id": 123
     }
   },
-  "description": "Add tracking market",
+  "description": "Added tracking market",
   "timestamp": 1789862400000
 }
 """
@@ -34,9 +34,9 @@ class TrackingMarketAddedEvPayload(ContractModel):
     
 class TrackingMarketAddedEvInfo(MsgInfo):
     message_type: Literal["trading_state"] = "trading_state"
-    message_name: Literal["market_is_tracking_ev"] = "market_is_tracking_ev"
+    message_name: Literal["tracking_market_added_ev"] = "tracking_market_added_ev"
     
 class TrackingMarketAddedEvMsg(BotMessage):
     message: TrackingMarketAddedEvInfo
     payload: TrackingMarketAddedEvPayload
-    description: str = "Add tracking market"
+    description: str = "Added tracking market"
