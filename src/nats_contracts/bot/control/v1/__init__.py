@@ -1,3 +1,5 @@
+from .common.models import ContractModel, MsgInfo, BotMessage
+
 from .failed.command_failed_ev import CommandFailedEvMsg
 
 from .lifecycle.bot_started_ev import BotStartedEvMsg
