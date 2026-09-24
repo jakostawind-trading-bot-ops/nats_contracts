@@ -8,7 +8,7 @@ from nats_contracts.bot.control.v1.common.models import (
 )
 
 class TrackingMarketRemovedEvPayload(ContractModel):
-    market_id: str
+    market_id: int
     
 class TrackingMarketRemovedEvInfo(MsgInfo):
     message_type: Literal["trading_state"] = "trading_state"
