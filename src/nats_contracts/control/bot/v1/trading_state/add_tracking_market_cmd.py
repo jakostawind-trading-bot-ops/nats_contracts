@@ -14,7 +14,7 @@ from nats_contracts.control.bot.v1.common.models import (
     "trace_id": "550e8400-e29b-41d4-a716-446655440001",
     "message_version": "V1",
     "message_type": "trading_state",
-    "message_name": "track_market_cmd"
+    "message_name": "add_tracking_market_cmd"
   },
   "payload": {
     "market_id": 123
@@ -30,9 +30,9 @@ class AddTrackingMarketPayload(ContractModel):
     
 class AddTrackingMarketInfo(MsgInfo):
     message_type: Literal["trading_state"] = "trading_state"
-    message_name: Literal["track_market_cmd"] = "track_market_cmd"
+    message_name: Literal["add_tracking_market_cmd"] = "add_tracking_market_cmd"
     
 class AddTrackingMarketCmdMsg(ControlMessage[AddTrackingMarketPayload]):
     message: AddTrackingMarketInfo
     payload: AddTrackingMarketPayload
-    description: str = "Track market"
+    description: str = "Add market to tracking markets"
