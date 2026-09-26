@@ -19,7 +19,7 @@ class BotMessage[PayloadT: ContractModel](ContractModel):
     message: MsgInfo
     payload: PayloadT
     description: str
-    timestamp: int  # in ms
+    timestamp: str
     
     @classmethod
     def subject_suffix(cls) -> str:

@@ -7,8 +7,10 @@ from nats_contracts.control.bot.v1.common.models import (
 )
 
 """
+control.to.bot.test_bot.command.V1.trading_state.add_tracking_market_cmd
+
 {
-  "bot_id": "bot-1",
+  "bot_id": "test_bot",
   "message": {
     "message_id": "550e8400-e29b-41d4-a716-446655440000",
     "trace_id": "550e8400-e29b-41d4-a716-446655440001",
@@ -19,7 +21,7 @@ from nats_contracts.control.bot.v1.common.models import (
   "payload": {
     "market_id": 123
   },
-  "description": "Track market",
+  "description": "Add market to tracking markets",
   "timestamp": 1789862400000
 }
 """
