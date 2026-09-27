@@ -1,3 +1,5 @@
+BOT_TO_CONTROL_EVENTS_JETSTEAM = "BOT_TO_CONTROL_EVENTS"
+
 BOT_TO_CONTROL_EVENT_V1_TEMPLATE = (
     "bot.{bot_id}.to.control.event.{subject_suffix}"
 )
