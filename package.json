@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "generate:subjects": "node scripts/generate_subjects.mjs schemas/bot/subjects.yaml generated/go/schemas/bot/control/v1/subjects.gen.go v1",
+    "test:subjects": "node --test tests/generate_subjects.test.mjs"
+  },
+  "devDependencies": {
+    "quicktype": "26.0.0",
+    "yaml": "2.9.1"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BotStartedEventV1",
+  "allOf": [
+    {
+      "$ref": "../common/bot_event.schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "payload": {
+          "type": "object",
+          "properties": {
+            "previous_status": {
+              "type": "string"
+            },
+            "current_status": {
+              "type": "string"
+            }
+          },
+          "required": ["previous_status", "current_status"]
+        }
+      }
+    }
+  ]
+}

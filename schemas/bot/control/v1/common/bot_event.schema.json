@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BotEventV1",
+  "type": "object",
+  "properties": {
+    "bot_id": {
+      "type": "string"
+    },
+    "bot_status": {
+      "type": "string"
+    },
+    "message": {
+      "type": "object",
+      "properties": {
+        "message_id": {
+          "type": "string"
+        },
+        "correlation_id": {
+          "type": "string"
+        },
+        "causation_id": {
+          "type": "string"
+        }
+      },
+      "required": ["message_id", "correlation_id", "causation_id"]
+    },
+    "payload": {},
+    "timestamp": {
+      "type": "string"
+    }
+  },
+  "required": ["bot_id", "bot_status", "message", "payload", "timestamp"]
+}

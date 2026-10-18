@@ -1,0 +1,6 @@
+Subjects:
+  BotToControl: bot.*.to.control.
+
+BotToControlEvents:
+  V1:
+    BotStartedEventV1: v1.lifecycle.bot_started_event
